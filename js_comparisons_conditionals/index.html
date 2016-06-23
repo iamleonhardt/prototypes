@@ -6,7 +6,7 @@
         var myString = "5";
         var myBigNumber = 255;
         var gameNumber = 64;
-        var userInput1 = prompt('Enter a number between 1 and 100');
+        var userInput1 = parseInt(prompt('Enter a number between 1 and 100'));
         var userInput2 = gameNumber;
         //output var
         var output1 = (mySmallNumber == myString);
@@ -38,21 +38,24 @@
             console.log("That\'s not it. Try again!")
         }
         //Switches get stiches
+        console.log("Test: userInput1 = ", userInput1, " gameNumber = ", gameNumber);
         switch (userInput1) {
+
             case gameNumber:
                 console.log("You found the correct number!");
                 break;
-            case (gameNumber - 10):
+            case gameNumber - 10:
                 console.log("Too low, but warm.");
                 break;
-            case (gameNumber + 10):
+            case gameNumber + 10:
                 console.log("Too high, but warm.");
                 break;
-            case (gameNumber - 25):
+            case gameNumber - 25:
                 console.log("Too low and cold.");
                 break;
-            case (gameNumber + 25):
+            case gameNumber + 25:
                 console.log("Too low and cold.");
+                break;
             default:
                 console.log("You are way off!");
         }
