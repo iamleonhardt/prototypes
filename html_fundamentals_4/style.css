@@ -1,0 +1,46 @@
+p.aboutMe {
+    font-size: 75%
+}
+
+h2.aboutMe {
+    color: cornflowerblue;
+}
+
+body {
+    text-align: center;
+    margin: auto;
+    width: 80%;
+}
+
+img {
+    height: 200px;
+    float: left;
+}
+
+.nav {
+    list-style-type: none;
+}
+
+.nav li {
+    display: inline;
+    margin: 30px;
+    font-size: 110%;
+}
+
+h1.skills, h1.experience {
+    font-family: 'Montserrat', sans-serif;
+}
+
+#experience-list {
+    background-color: snow;
+    text-align: left;
+    border: 10px;
+}
+
+.skills-list {
+    text-align: left;
+}
+
+ul.embedli {
+    color: darkseagreen;
+}
