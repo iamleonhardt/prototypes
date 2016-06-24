@@ -37,7 +37,7 @@ h1.skills, h1.experience {
     border: 10px;
 }
 
-.skills-list {
+#skills-list {
     text-align: left;
 }
 
