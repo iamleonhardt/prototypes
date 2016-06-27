@@ -1,0 +1,12 @@
+div#title {
+    height: 15vh;
+}
+
+div#leftNav {
+    width: 15vw;
+    float: left;
+}
+
+div#mainContent {
+   // float: left;
+}

@@ -1,0 +1,15 @@
+div#header {
+    height: 15vh;
+}
+
+div#main-content {
+    height: auto;
+}
+
+div#header ul {
+    list-style-type: none;
+}
+
+div#header li {
+    display: inline-block;
+}

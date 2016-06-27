@@ -1,0 +1,23 @@
+div#header {
+    height: 15vh;
+}
+
+div#main-content {
+    height: 70vh;
+}
+
+div#footer {
+    height: 15vh;
+}
+
+ul {
+    list-style-type: none;
+}
+
+div#header li {
+    display: inline;
+}
+
+ol {
+    list-style-type: none;
+}
