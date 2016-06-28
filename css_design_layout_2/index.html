@@ -2,18 +2,19 @@
 <html>
 <head>
     <style>
+        /* HEADER */
         header {
             width: 100%;
             height: 20vh;
             background-color: powderblue;
             position: relative;
         }
+
         .imgContainer {
             float: left;
             height: 100%;
-            width: 20%;
+            width: 20vw;
             position: relative;
-            background-color: lightgrey;
         }
 
         img {
@@ -24,39 +25,67 @@
             margin: 0 auto;
         }
 
-        .textContainer {
-            float: left;
-            height: 40%;
-            width: 79%;
+        .rightContainer {
             position: relative;
-            top: 5%;
-            background-color: beige;
+            height: 20vh;
+            width: 79vw;
+            float: left;
         }
-        h1 {
-            font-size: 300%;
-            font-family: Arial, sans-serif;
-            color: ghostwhite;
+
+        /*.headerContainer {
+            float: left;
+            width: 100%;
+            height: 50%;
+            position: relative;
         }
 
         nav {
-            list-style-type: none;
             float: left;
-            height: 50%;
-            position:absolute;
+            width: 50%;
+            position: absolute;
             bottom: 0;
+
+        }*/
+
+        h1 {
+            font-size: 300%;
+            font-family: arial, sans-serif;
+            color: ghostwhite;
+            float:left;
+            width: 50%;
+            position: relative;
+            top: 10px;
         }
 
-        ul {
-
+        ul#nav {
+            list-style-type: none;
+            float: left;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
         }
 
         li {
             font-family: arial, sans-serif;
-            display: inline;
+            display: inline-block;
             text-transform: uppercase;
-            border: 1px lightgoldenrodyellow solid;
-            padding: 8px;
+            padding: 5px;
+            margin: 0;
         }
+
+        li > a {
+            text-decoration: none;
+            color: white;
+        }
+
+        li > a:hover {
+            color: darkgrey;
+        }
+
+        /* COLUMNS */
+
     </style>
 </head>
 <body>
@@ -65,19 +94,17 @@
     <div class="imgContainer">
         <img src="images/aa_logo.png">
     </div>
-    <!-- Text Container -->
-    <div class="textContainer">
+    <!-- Right Header Container -->
+    <div class="rightContainer">
         <h1>Company Inc.</h1>
-    </div>
-    <nav>
         <ul id="nav">
             <li id="home"><a href="home.html">Home</a></li>
             <li id="aboutUs"><a href="aboutUs.html">About Us</a></li>
             <li id="ourMenu"><a href="ourMenu.html">Our Menu</a></li>
             <li id="contactUs"><a href="contactUs.html">Contact Us</a></li>
         </ul>
-    </nav>
-
+    </div>
 </header>
+
 </body>
 </html>
