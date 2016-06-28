@@ -48,19 +48,31 @@
     <script>
         $(document).ready(function () {
             //playground 1 code
-            var new_div = $("<div class='playground playground_source'>");
             var new_h1 = $("<h1>I am a heading</h1>");
-            var new_ul = $("<ul>");
-            var new_li = $("<li>");
-
-            new_ul.append(new_li);
-            new_div.append(new_h1, new_ul);
-            $('body').append(new_div);
+            var new_p = $("<p>This is an awesome paragraph</p>");
+            var new_p2 = $("<p style='color: red'>This has red text</p>");
+            $('#playground1').append(new_h1, new_p, new_p2);
 
             //playground 2 code
+            var new_div1 = $("<div class='awesome_class'>Here is some awesome div text</div>");
+            var new_div2 = $("<div class='awesome_class' id='my_awesome_div2'>Here is MORE awesome div text</div>");
+            var new_div3 = $("<div class='awesome_class' id='my_awesome_div3' data-coolness='high'>Here is <stong>EVEN MORE</stong> awesome div text</div>");
+            $('#playground2').append(new_div1, new_div2, new_div3);
 
             //playground 3 code
-                    });
+            var new_ul = $("<ul class='neato'>");
+                var new_li1 = $("<li>Link 1</li>");
+                var new_li2 = $("<li>Link 2</li>");
+                var new_li3 = $("<li>Link 3</li>");
+
+            var new_fig = $("<figure class='awesome_picture'>");
+                var new_img = $("<img src='http://comerecommended.com/wp-content/uploads/2013/01/how-to-get-awesome-back.jpg'>");
+                var new_figcap = $("<figcaption>That\'s right, <span class='bold_text'>you are</span></figcaption>");
+
+            $(new_fig).append(new_img, new_figcap);
+            $(new_ul).append(new_li1, new_li2, new_li3);
+            $("#playground3").append(new_ul, new_fig);
+        });
     </script>
 </head>
 <body>
