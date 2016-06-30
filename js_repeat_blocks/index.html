@@ -11,30 +11,38 @@
             console.log(numbers[i]);
         }
         for (var j = 0; j <= 9; j += 2) {
-            console.log (numbers[j]);
+            console.log(numbers[j]);
         }
         for (var j = 2; j <= 9; j += 2) {
-            console.log (mixedArray[j]);
+            console.log(mixedArray[j]);
         }
         /* Feature Set 2 - For In Loop */
         var classRoom = {desk1: "Stu", desk2: "Peggy", desk3: "LoneStar", desk4: "George", desk5: "Sheldon"}
+
+
         for (var name in classRoom) {
             console.log(classRoom[name] + " is at " + name);
         }
-        /* Feature Set 3 - While Loop */
-        var studentArray = [{name: "Bob", grade: 87}, {name: "Fred", grade: 82}, {name: "George", grade 93},{name: "Robert", grade: 85}]
-        var k = 0;
-        while (studentArray[k] != studentName) {
-            k++
-        }
-        function findStudent(studentName){
 
-            if (student is found) {
-                console.log("Found " + studentName + ". Their grade is: " + studentArray[studentName]);
-            }
-            else {
-                console.log("Student " + studentName + " not found.");
-            }
+        /* Feature Set 3 - While Loop */
+        var studentArray = [{name: "Bob", grade: 87}, {name: "Fred", grade: 82}, {
+            name: "George", grade: 93}, {name: "Robert", grade: 85}];
+
+        function findStudent(name) {
+            var output = '';
+            var i = 0;
+            var found = false;
+        }
+        while (!found && i < studentArray.length) {
+            var student = studentArray[i];
+
+
+        }
+        if (!found) {
+            output = "Student " + name + "not found.";
+        }
+        else {
+            output = "Found " + name + ". Their grade is: " + grade + ".";
         }
 
     </script>
