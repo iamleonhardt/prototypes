@@ -25,24 +25,26 @@
         }
 
         /* Feature Set 3 - While Loop */
-        var studentArray = [{name: "Bob", grade: 87}, {name: "Fred", grade: 82}, {
-            name: "George", grade: 93}, {name: "Robert", grade: 85}];
+        var studentArray = [{name: "Bob", grade: 87}, {name: "Fred", grade: 82}, {name: "George", grade: 93}, {name: "Robert", grade: 85}];
 
         function findStudent(name) {
             var output = '';
             var i = 0;
             var found = false;
-        }
-        while (!found && i < studentArray.length) {
-            var student = studentArray[i];
 
+            while (!found && i < studentArray.length) {
+                var student = studentArray[i];
+                if (student.name == name) {
+                    output = "Found " + name + ". Their grade is: " + student.grade;
+                    console.log(output);
+                    found = true;
+                }
+                i++;
+            }
+            if (!found) {
+                console.log("Student " + name + " not found.");
+            }
 
-        }
-        if (!found) {
-            output = "Student " + name + "not found.";
-        }
-        else {
-            output = "Found " + name + ". Their grade is: " + grade + ".";
         }
 
     </script>
