@@ -8,7 +8,8 @@
         header {
             width: 100%;
             height: 20vh;
-            background-color: #00E3BB;
+            background-color: #d2282a;
+            position:relative;
         }
 
         #luckyCat {
@@ -30,28 +31,79 @@
             margin: 1%;
         }
 
-        ul#nav {
+        nav {
+            position:absolute;
+            right: 0;
+            bottom: 0;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            font-family: "arial", sans-serif;
+        }
 
+        ul#nav {
+            margin: 0;
+            padding: 0;
         }
 
         #nav li {
+            display: inline-block;
+        }
+
+        nav li a {
+            display: block;
+            color: #06445d;
+            text-align: center;
+            padding: 16px 50px 16px 50px;
+            text-decoration: none;
+        }
+
+        .active {
+            background-color: linen;
+        }
+
+        section#fs-2 {
+            width: 100vw;
+            height: 30vh;
+            background-color: linen;
+            float: left;
+        }
+
+        #fs-2 div {
+            height: 100%;
+            border: 1px solid steelblue;
 
         }
 
+        div#div-a {
+            width: 24%;
+            background-color: powderblue;
+            float:left;
+        }
+
+        div#div-b {
+            width: 74%;
+            background-color: darkseagreen;
+            float: left;
+        }
     </style>
 </head>
 <body>
     <header>
-        <img id="luckyCat" src="images/luckycat.png" alt="lucky cat">
-        <h1 id="companyName"> Lucky Cat Games</h1>
+        <img id="luckyCat" src="images/cat.jpg" alt="lucky cat">
+        <h1 id="companyName"> LUCKY CAT GAMES</h1>
         <nav>
             <ul id="nav">
-                <li><a href="*">Home</a></li>
+                <li><a class="active" href="*">Home</a></li>
                 <li><a href="*">Games</a></li>
                 <li><a href="*">Staff</a></li>
                 <li><a href="*">Contact</a></li>
             </ul>
         </nav>
+        <section id="fs-2">
+            <div id="div-a"></div>
+            <div id="div-b"></div>
+        </section>
     </header>
 
 </body>
