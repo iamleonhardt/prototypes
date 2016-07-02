@@ -5,11 +5,18 @@
     <title>CSS Design Layout 2</title>
 
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
         header {
+            float: left;
+            clear: both;
             width: 100%;
             height: 20vh;
             background-color: #d2282a;
-            position:relative;
+            position: relative;
         }
 
         #luckyCat {
@@ -32,7 +39,7 @@
         }
 
         nav {
-            position:absolute;
+            position: absolute;
             right: 0;
             bottom: 0;
             margin: 0;
@@ -51,11 +58,12 @@
         }
 
         nav li a {
-            display: block;
+            display: inline-block;
             color: #06445d;
             text-align: center;
             padding: 16px 50px 16px 50px;
             text-decoration: none;
+            position:relative;
         }
 
         .active {
@@ -63,48 +71,100 @@
         }
 
         section#fs-2 {
+            float: left;
+            clear: both;
             width: 100vw;
             height: 30vh;
             background-color: linen;
-            float: left;
+
         }
 
         #fs-2 div {
             height: 100%;
-            border: 1px solid steelblue;
-
         }
 
         div#div-a {
-            width: 24%;
+            float: left;
+            width: 25%;
             background-color: powderblue;
-            float:left;
+
         }
 
         div#div-b {
-            width: 74%;
-            background-color: darkseagreen;
             float: left;
+            width: 75%;
+            background-color: darkseagreen;
         }
+        section#fs-3 {
+            float: left;
+            width: 100vw;
+            height: 30vh;
+            background-color: tomato;
+        }
+
+        #fs-3 div {
+            height: 100%;
+            display: inline-block;
+        }
+
+        div#div-c {
+            background-color: orange;
+            width: 25vw;
+
+        }
+
+        div#div-d {
+            background-color: burlywood;
+            width: 75vw;
+        }
+
+        footer {
+            height: 20vh;
+            background-color: plum;
+        }
+
     </style>
 </head>
 <body>
-    <header>
-        <img id="luckyCat" src="images/cat.jpg" alt="lucky cat">
-        <h1 id="companyName"> LUCKY CAT GAMES</h1>
-        <nav>
-            <ul id="nav">
-                <li><a class="active" href="*">Home</a></li>
-                <li><a href="*">Games</a></li>
-                <li><a href="*">Staff</a></li>
-                <li><a href="*">Contact</a></li>
+<header>
+    <img id="luckyCat" src="images/cat.jpg" alt="lucky cat">
+    <h1 id="companyName"> LUCKY CAT GAMES</h1>
+    <nav>
+        <ul id="nav">
+            <li><a class="active" href="*">Home</a></li>
+            <li><a href="*">Games</a></li>
+            <li><a href="*">Staff</a></li>
+            <li><a href="*">Contact</a></li>
+        </ul>
+    </nav>
+    <section id="fs-2">
+        <div id="div-a">
+            <h2>This is a list</h2>
+            <ul>
+                <li>item 1</li>
+                <li>item 2</li>
+                <li>item 3</li>
+                <li>item 4</li>
+                <li>item 5</li>
+                <li>item 6</li>
+                <li>item 7</li>
+                <li>item 8</li>
+                <li>item 9</li>
+                <li>item 10</li>
             </ul>
-        </nav>
-        <section id="fs-2">
-            <div id="div-a"></div>
-            <div id="div-b"></div>
-        </section>
-    </header>
+        </div>
+        <div id="div-b">
+            <h2> Header for main article</h2>
+            <p>Maecenas faucibus mollis interdum. Aenean lacinia bibendum nulla sed consectetur. Donec id elit non mi porta gravida at eget metus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p><br>
+            <p>Maecenas faucibus mollis interdum. Aenean lacinia bibendum nulla sed consectetur. Donec id elit non mi porta gravida at eget metus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+        </div>
+    </section>
+    <section id="fs-3">
+        <div id="div-c"></div>
+        <div id="div-d"></div>
+    </section>
+    <footer></footer>
+</header>
 
 </body>
 </html>
