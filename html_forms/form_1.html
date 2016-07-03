@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forms Feature Set 1</title>
+
+    <style>
+        input {
+            display: block;
+        }
+
+        input.textInput {
+            background-color: #3cbc8d;
+            font-family: arial, sans-serif;
+            border: 1px solid darkgrey;
+            box-shadow: 10px 10px 5px #888888;
+        }
+    </style>
+</head>
+<body>
+<form action="http://danielpaschal.com/learningfuze/reflect.php" method="post">
+    <input class="textInput" type="text">
+    <input class="textInput" type="text">
+
+    <textarea rows="10" cols="30">That text area..</textarea>
+
+    <p>Which is most favorite?
+        <input type="radio" name="flava" id="vanilla" value="vanilla" checked><label for="vanilla">Vanilla
+            <input type="radio" name="flava" id="chocolate" value="chocolate"><label for="chocolate">Chocolate
+                <input type="radio" name="flava" id="strawberry" value="strawberry"><label for="strawberry">Strawberry
+    </p>
+    <p> Would you like to play a game?
+        <input type="checkbox" id="splendor"><label for="splendor">Splendor
+            <input type="checkbox" id="imperial"><label for="imperial">Imperial Settlers
+                <input type="checkbox" id="lords"><label for="lords">Lords of Vegas
+                    <input type="checkbox" disabled>I don't play games
+    </p>
+        <p>Do you like the meats? (you can select multiple options by holding ctrl on a pc or cmd on a mac)</p>
+            <select name="meat" id="meats" size="4" multiple="multiple">
+                <option value="beef">beef</option>
+                <option value="chicken">chicken</option>
+                <option value="fish">fish</option>
+                <option value="other">other</option>
+            </select>
+
+    <input type="submit" value="Submit Form">
+</form>
+</body>
+</html>
