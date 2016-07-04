@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forms Feature Set 2</title>
+    <style>
+        body {
+            font-family: arial, sans-serif;
+        }
+
+        div.wrapper {
+            border-radius: 15px;
+            background-color: indianred;
+            color: white;
+            width: 1200px;
+            margin: auto;
+        }
+
+        div.container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .instructions ol {
+            padding: 0;
+            list-style: decimal inside;
+        }
+
+        div.forms {
+            margin:0;
+            padding: 0;
+            overflow: hidden;
+
+        }
+        form input {
+            padding: 2%;
+            width: 44%;
+            margin: 1% .6%;
+            box-shadow: 0 2px 5px black;
+            border-style: none;
+        }
+
+        input#ssn {
+            width: 15%
+        }
+
+        input#button {
+            background-color: darkred;
+            color: white;
+            width: 20%;
+            float: right;
+        }
+
+    </style>
+
+</head>
+<body>
+<div class="wrapper">
+    <div class="container">
+        <div class="instructions">
+            <h1>Instructions for Application - Academic Year 2014</h1>
+            <ol>
+                <li>The deadline for 2014-2015 scholarship appication: March 30, 2014. Application received after march
+                    30
+                    will be considered on a funds available basis.
+                </li>
+                <li>Only completed applications will be considered. Do Not Leave Items Blank.</li>
+                <li>Attach a crrent copy of your high school and/or college transcripts.</li>
+                <li>Two signed letters of recommendation (from non-relatives) must be attached to this application.</li>
+            </ol>
+            <p>Consideration for any scholarship award is based on a point system including GPA, participation in
+                extra-curricular activities, school organization and community service. This will be a four semester
+                scholarship, and you must maintain criteria set in the guidelines.</p>
+        </div>
+        <div class="forms">
+            <h2>Applicant Data</h2>
+            <form action="http://danielpaschal.com/learningfuze/reflect.php" method="post">
+                <input type="text" name="name" placeholder="Last Name, First Name, MI">
+                <input id="ssn" type="text" name="ssn" placeholder="Social Security #">
+                <input type="text" name="address" placeholder="City, State, Zip, County">
+                <input type="text" name="phone" placeholder="Permanent Home Phone">
+                <input type="text" name="major" placeholder="Intended Major at University">
+                <input type="text" name="location" placeholder="At which location will you be attending?">
+                <input id="button" type="submit" value="NEXT >>">
+            </form>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+
+</body>
+</html>
