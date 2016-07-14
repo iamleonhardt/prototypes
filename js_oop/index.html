@@ -8,11 +8,34 @@
         //CONSTRUCTOR
         function coinStack(initialCoins){
             this.value = initialCoins;
-        }
+            // METHOD THAT ADDS COINS
+            this.addCoins = function (coinsAdded){
+                this.value += coinsAdded;
+            };
+            // METHOD THAT REMOVES COINS
+            this.removeCoins = function (coinsRemoved){
+                if (this.value>coinsRemoved){
+                    this.value -= coinsRemoved;
+                    return coinsRemoved;
+                }
+                else {
+                    var smurfs = this.value;
+                    this.value = 0;
+                    return smurfs; //amount of coins removed
+
+                }
+
+            };
+        };
         // INSTANCE OF OBJECT
         var stack1 = new coinStack(50);
-
-        console.log("Coin Stack 1 is " + stack1.value + " coins deep." )
+        console.log("Coin Stack 1 is " + stack1.value + " coins deep." );
+        stack1.addCoins(15);
+        console.log("I have " + stack1.value + " coins in my coin stack");
+        stack1.removeCoins(37);
+        console.log("I have " + stack1.value + " coins in my coin stack");
+        stack1.removeCoins(55);
+        console.log("I have " + stack1.value + " coins in my coin stack");
 
     </script>
 
