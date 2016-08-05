@@ -14,7 +14,8 @@
     <input type="text" placeholder="Email" ng-model="fc.form.email"><br>
     <textarea name="comments" id="comments" cols="30" rows="5" placeholder="Comments..."
               ng-model="fc.form.comments" ng-disabled="fc.stillSpace()"></textarea><br>
-    <p> Characters remaining: {{ fc.availChars() }}</p>
+    <p>Characters remaining: {{ fc.availChars() }}</p>
+
     <button ng-click="fc.add()">Click to Add</button>
 
     <div ng-controller="tableController as tc">
@@ -36,7 +37,9 @@
                 <td>{{ fc.form.email }}</td>
                 <td>{{ fc.form.comments }}</td>
             </tr>
+            <p>Total Rows: {{ tc.total() }}</p>
         </table>
+
     </div>
 
 </div>
@@ -78,8 +81,8 @@
             $scope.formArray.splice(index,1);
         }
 
-        this.total = function(){
-            return $index - 1;
+        this.total = function() {
+            return $scope.formArray.length;
         }
     });
 </script>
