@@ -1,12 +1,86 @@
 <!doctype html>
-<html lang="en">
+<html ng-app="myApp" lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Angular Controllers</title>
     <!-- Add the AngularJS CDN below -->
-
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
 </head>
 <body>
+<div ng-controller="formController as fc">
+    <input type="text" placeholder="First Name" ng-model="fc.form.fName"><br>
+    <input type="text" placeholder="Last Name" ng-model="fc.form.lName"><br>
+    <input type="text" placeholder="Email" ng-model="fc.form.email"><br>
+    <textarea name="comments" id="comments" cols="30" rows="5" placeholder="Comments..."
+              ng-model="fc.form.comments" ng-disabled="fc.stillSpace()"></textarea><br>
+    <p> Characters remaining: {{ fc.availChars() }}</p>
+    <button ng-click="fc.add()">Click to Add</button>
 
+    <div ng-controller="tableController as tc">
+        <table>
+            <tr>
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>Comments</th>
+                <th>Operations</th>
+            </tr>
+            <tr ng-repeat="people in formArray">
+                <td>{{ people.fName + ' ' + people.lName}}</td>
+                <td>{{ people.email }}</td>
+                <td>{{ people.comments }}</td>
+                <td><button ng-click="tc.removeRow(this.$index)">Delete</button></td>
+            </tr>
+            <tr>
+                <td>{{ fc.form.fName + ' ' + fc.form.lName}}</td>
+                <td>{{ fc.form.email }}</td>
+                <td>{{ fc.form.comments }}</td>
+            </tr>
+        </table>
+    </div>
+
+</div>
+
+<script>
+    var app = angular.module("myApp", []);
+    app.controller('formController', function ($scope) {
+        this.form = {
+            comments: ''
+        };
+        $scope.formArray = [];
+
+        this.add = function () {
+            console.log(this.form);
+            $scope.formArray.push(this.form);
+            this.form = {
+                comments: ''
+            };
+        };
+
+        this.maxlength = 25;
+
+        this.availChars = function () {
+            return this.maxlength - this.form.comments.length;
+        };
+
+        this.stillSpace = function () {
+            if (this.availChars() <= 0) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+    });
+
+    app.controller('tableController', function ($scope) {
+        this.removeRow = function(index){
+            $scope.formArray.splice(index,1);
+        }
+
+        this.total = function(){
+            return $index - 1;
+        }
+    });
+</script>
 </body>
 </html>
