@@ -1,11 +1,30 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app="myApp">
 <head>
     <meta charset="UTF-8">
     <title>Angular Services Intro</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
 </head>
 <body>
+
+<div ng-controller="itunesController as ic">
+    Enter Data: <input type="text" ng-model="ic.input">
+    <button ng-click="ic.itunesCall(ic.input)">Clicky</button><br>
+    <audio controls id="audio"></audio>
+
+
+
+<table>
+    <tr ng-repeat="music in ic.musicArray">
+        <td><img ng-src="{{ music.artworkUrl60 }}"</td>
+        <td>Artist : {{ music.artistName }}<br>
+            Album : {{ music.collectionName }}<br>
+            Song :  {{ music.trackName }} <button ng-click="ic.loadSong($index)">Play</button>
+            </td>
+    </tr>
+</table>
+
+</div>
 
 <script src="script.js"></script>
 </body>
