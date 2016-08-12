@@ -10,7 +10,8 @@
 <div ng-controller="itunesController as ic">
     Enter Data: <input type="text" ng-model="ic.input">
     <button ng-click="ic.itunesCall(ic.input)">Clicky</button><br>
-    <audio controls id="audio"></audio>
+    <audio controls id="audioPlayer" src=""></audio>
+    Song Name: {{ ic.song.trackName }}
 
 
 

@@ -23,4 +23,15 @@ app.controller("itunesController", function($log, $http){
             $log.error(response);
         });
     };
+
+    this.loadSong = function(index){
+        self.song = self.musicArray[index];
+        document.getElementById('audioPlayer').addEventListener('canplaythrough', function(){
+            console.log('can play through triggered or something like that', this);
+            this.play();
+
+
+        });
+        document.getElementById('audioPlayer').src = self.song.previewUrl;
+    }
 });
