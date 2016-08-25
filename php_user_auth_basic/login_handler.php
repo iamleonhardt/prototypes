@@ -14,8 +14,9 @@ $username = $_POST['username'];
 $password = $_POST['password'];
 
 for($i = 0; $i < count($user_info); $i++){
-    if ($username == $user_info[$i]['username']){
-        print ' **it worked!** ';
+    if ($username == $user_info[$i]['username'] && $password == $user_info[$i]['password']){
+        $_SESSION['user_id'] = $i;
+        print ' **it worked!** '. $_SESSION['user_id'];
     }
     else {
         print ' it didnt work ';
